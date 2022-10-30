@@ -1,12 +1,16 @@
 import { css } from "@emotion/react";
+import { CommentList } from "../CommentList";
 
 export function Container() {
   return (
     <div
       css={css`
         width: 100%;
-        background-color: #fff;
+        display: flex;
+        flex-direction: column;
       `}
-    ></div>
+    >
+      <CommentList />
+    </div>
   );
 }
