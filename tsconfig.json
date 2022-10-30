@@ -15,7 +15,11 @@
     "noEmit": true,
     "jsx": "react-jsx",
     "jsxImportSource": "@emotion/react",
-    "useUnknownInCatchVariables": true
+    "useUnknownInCatchVariables": true,
+    "baseUrl": ".",
+    "paths": {
+      "src/*": ["./src/*"]
+    }
   },
   "include": ["src"]
 }

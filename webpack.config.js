@@ -13,6 +13,7 @@ module.exports = {
     filename: "[name].[contenthash].js",
   },
   resolve: {
+    alias: { src: path.resolve(__dirname, "./src") },
     extensions: [".js", ".cjs", ".mjs", ".jsx", ".ts", ".tsx"],
   },
   module: {
@@ -42,5 +43,6 @@ module.exports = {
   devServer: {
     port: 3000,
     historyApiFallback: true,
+    hot: true,
   },
 };
