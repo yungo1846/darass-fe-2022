@@ -1,4 +1,5 @@
 import { css } from "@emotion/react";
+import { Avatar } from "../Avatar";
 import { CommentList } from "../CommentList";
 
 export function Container() {
@@ -10,7 +11,8 @@ export function Container() {
         flex-direction: column;
       `}
     >
-      <CommentList />
+      {/* <CommentList /> */}
+      {/* <Avatar /> */}
     </div>
   );
 }

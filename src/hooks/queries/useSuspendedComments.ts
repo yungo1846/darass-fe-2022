@@ -2,9 +2,9 @@ import { useSuspendedQuery } from "@toss/react-query";
 import { Comment } from "src/domains/comment";
 import { client } from "src/utils/network";
 
-export function useComments() {
+export function useSuspendedComments() {
   return useSuspendedQuery(
-    useComments.key,
+    useSuspendedComments.key,
     async () => {
       const comments = await client.get("v1/comments").json<Comment[]>();
 
@@ -18,4 +18,4 @@ export function useComments() {
   );
 }
 
-useComments.key = ["comments"];
+useSuspendedComments.key = ["comments"];

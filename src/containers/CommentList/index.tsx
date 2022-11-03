@@ -1,9 +1,8 @@
 import { CommentListRow } from "src/components/Comment";
-import { useComments } from "src/hooks/useComments";
+import { useSuspendedComments } from "src/hooks/queries/useSuspendedComments";
 
 export function CommentList() {
-  const { data: comments } = useComments();
-  console.log("hi");
+  const { data: comments } = useSuspendedComments();
 
   return (
     <ul>

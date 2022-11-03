@@ -1759,6 +1759,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/dotenv-webpack@npm:^7.0.3":
+  version: 7.0.3
+  resolution: "@types/dotenv-webpack@npm:7.0.3"
+  dependencies:
+    "@types/node": "*"
+    tapable: ^2.2.0
+    webpack: ^5
+  checksum: db5401515df936615447364da0ced0ffcc458f83ac1a4f5c52d9285b88471c5fd9272d9bef56a2514a9b47cef482636f8032c346d1a2605b77b3a55741a7be0b
+  languageName: node
+  linkType: hard
+
 "@types/eslint-scope@npm:^3.7.3":
   version: 3.7.4
   resolution: "@types/eslint-scope@npm:3.7.4"
@@ -1846,7 +1857,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:*":
+"@types/node@npm:*, @types/node@npm:^18.11.7":
   version: 18.11.7
   resolution: "@types/node@npm:18.11.7"
   checksum: 69d630825cf6fbf580d08d76a4d4836ef8c34ed4fe0842221ade87d275f517099cbfabe8e22397208e564bd24926db97699ab9db5c091383269a432b336665e2
@@ -2907,9 +2918,12 @@ __metadata:
     "@toss/react-query": ^1.0.2
     "@types/babel__core": ^7
     "@types/babel__preset-env": ^7
+    "@types/dotenv-webpack": ^7.0.3
+    "@types/node": ^18.11.7
     "@types/react": ^18
     "@types/react-dom": ^18
     babel-loader: ^9.0.0
+    dotenv-webpack: ^8.0.1
     html-webpack-plugin: ^5.5.0
     ky: ^0.31.4
     react: ^18.2.0
@@ -3064,6 +3078,33 @@ __metadata:
     no-case: ^3.0.4
     tslib: ^2.0.3
   checksum: a65e3519414856df0228b9f645332f974f2bf5433370f544a681122eab59e66038fc3349b4be1cdc47152779dac71a5864f1ccda2f745e767c46e9c6543b1169
+  languageName: node
+  linkType: hard
+
+"dotenv-defaults@npm:^2.0.2":
+  version: 2.0.2
+  resolution: "dotenv-defaults@npm:2.0.2"
+  dependencies:
+    dotenv: ^8.2.0
+  checksum: c005960bd048e2189c4799e729c41f362e415e6e0b54313d3f31e853a84b049bf770b25cb21c112c2805bb13a8376edc9de451fb514abf8546392d327c27f6e5
+  languageName: node
+  linkType: hard
+
+"dotenv-webpack@npm:^8.0.1":
+  version: 8.0.1
+  resolution: "dotenv-webpack@npm:8.0.1"
+  dependencies:
+    dotenv-defaults: ^2.0.2
+  peerDependencies:
+    webpack: ^4 || ^5
+  checksum: ee73eda78df90bcf7446763dfe5e518a2054ed6222783856912d2c6a255fdfc041854e125e036ff2603b06fb44f5234713fad5feecb1e66a54fe78a35a98fb87
+  languageName: node
+  linkType: hard
+
+"dotenv@npm:^8.2.0":
+  version: 8.6.0
+  resolution: "dotenv@npm:8.6.0"
+  checksum: 38e902c80b0666ab59e9310a3d24ed237029a7ce34d976796349765ac96b8d769f6df19090f1f471b77a25ca391971efde8a1ea63bb83111bd8bec8e5cc9b2cd
   languageName: node
   linkType: hard
 
@@ -5971,7 +6012,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"webpack@npm:^5.74.0":
+"webpack@npm:^5, webpack@npm:^5.74.0":
   version: 5.74.0
   resolution: "webpack@npm:5.74.0"
   dependencies:
