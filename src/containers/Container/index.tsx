@@ -1,4 +1,5 @@
 import { css } from "@emotion/react";
+import { useSuspendedUser } from "src/hooks/queries/useSuspendedUser";
 import { Avatar } from "../Avatar";
 import { CommentList } from "../CommentList";
 

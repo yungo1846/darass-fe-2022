@@ -17,7 +17,6 @@ export function App() {
       <Global styles={normalization} />
       <QueryClientProvider client={queryClient}>
         <Container />
-        <a href="http://localhost:8000/auth/kakao">로그인</a>
       </QueryClientProvider>
     </>
   );
