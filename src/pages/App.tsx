@@ -1,8 +1,7 @@
 import { Global } from "@emotion/react";
+import { QueryClient, QueryClientProvider } from "react-query";
 import { Container } from "src/containers/Container";
 import { normalization } from "src/styles/normalization";
-import { QueryClient, QueryClientProvider } from "react-query";
-import { client } from "src/utils/network";
 
 const queryClient = new QueryClient({
   defaultOptions: {

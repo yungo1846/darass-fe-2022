@@ -11,8 +11,8 @@ export function Container() {
         flex-direction: column;
       `}
     >
-      {/* <CommentList /> */}
-      {/* <Avatar /> */}
+      <CommentList />
+      <Avatar />
     </div>
   );
 }
