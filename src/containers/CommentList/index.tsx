@@ -3,6 +3,7 @@ import { useSuspendedComments } from "src/hooks/queries/useSuspendedComments";
 
 export function CommentList() {
   const { data: comments } = useSuspendedComments();
+  console.log(comments);
 
   return (
     <ul>

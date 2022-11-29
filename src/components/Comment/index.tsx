@@ -3,6 +3,7 @@ import styled from "@emotion/styled";
 import { Commenter } from "src/domains/commenter";
 import { css } from "@emotion/react";
 import { COLORS } from "src/styles/colors";
+import { Avatar as MAvatar } from "@mui/material";
 
 interface Props {
   comment: Comment;
@@ -24,13 +25,8 @@ const Container = styled.div`
 
 function Avatar({ commenter }: { commenter: Commenter }) {
   return (
-    <img
-      css={css`
-        width: 40px;
-        height: 40px;
-        border-radius: 50%;
-      `}
-      alt={`${commenter.name} 프로필 사진`}
+    <MAvatar
+      alt={`${commenter.name ?? "익명"}의 프로필 이미지`}
       src={commenter.profileImage}
     />
   );
@@ -42,9 +38,9 @@ function CommentBody({ comment }: { comment: Comment }) {
       css={css`
         display: flex;
         flex-direction: column;
-        background-color: ${COLORS.GRAY_500};
+        background-color: ${COLORS.GRAY_300};
         border-radius: 4px;
-        padding: 8px 12px;
+        padding: 12px 16px;
         margin: 0 10px 0 10px;
       `}
     >
@@ -62,7 +58,7 @@ function CommentBody({ comment }: { comment: Comment }) {
           font-size: 14px;
         `}
       >
-        {comment.content.body}
+        {comment.content}
       </span>
     </div>
   );

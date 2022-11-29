@@ -2,7 +2,7 @@ import styled from "@emotion/styled";
 import { Avatar as MAvatar } from "@mui/material";
 import { User } from "src/domains/user";
 import { useSuspendedUser } from "src/hooks/queries/useSuspendedUser";
-import userImage from "../../../public/images/user.png";
+import { css } from "@emotion/react";
 
 export function Avatar() {
   const { data: user } = useSuspendedUser();
@@ -17,15 +17,28 @@ export function Avatar() {
 function UnknownUser() {
   return (
     <>
-      <MAvatar src={userImage} alt="익명 유저" />
-      <Name>익명</Name>
-      <a href="http://localhost:8000/v1/auth/kakao">로그인</a>
+      <MAvatar src={undefined} alt="익명 유저" />
+      <a
+        css={css`
+          font-size: 20px;
+          font-weight: 600;
+          margin-left: 8px;
+        `}
+        href="http://localhost:8000/v1/auth/kakao"
+      >
+        로그인
+      </a>
     </>
   );
 }
 
 function LoggedInUser({ user }: { user: User }) {
-  return <MAvatar src={user.profileImage} alt={user.name} />;
+  return (
+    <>
+      <MAvatar src={user.profileImage} alt={user.name} />
+      <Name>{user.name}</Name>
+    </>
+  );
 }
 
 const Container = styled.div`
