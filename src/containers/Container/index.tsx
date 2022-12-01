@@ -1,5 +1,5 @@
 import { css } from "@emotion/react";
-import { useSuspendedUser } from "src/hooks/queries/useSuspendedUser";
+import { CommentInputBox } from "src/containers/CommentInputBox";
 import { Avatar } from "../Avatar";
 import { CommentList } from "../CommentList";
 
@@ -8,12 +8,14 @@ export function Container() {
     <div
       css={css`
         width: 100%;
+        max-width: 1200px;
         display: flex;
         flex-direction: column;
       `}
     >
       <CommentList />
       <Avatar />
+      <CommentInputBox />
     </div>
   );
 }
