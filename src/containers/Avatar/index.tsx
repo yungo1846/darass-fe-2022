@@ -45,6 +45,7 @@ const Container = styled.div`
   position: relative;
   display: flex;
   align-items: center;
+  align-self: flex-end;
 `;
 
 const Name = styled.span`

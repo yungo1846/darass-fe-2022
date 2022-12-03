@@ -8,7 +8,8 @@ export function Container() {
     <div
       css={css`
         width: 100%;
-        max-width: 1200px;
+        max-width: 1024px;
+        padding: 0 16px;
         display: flex;
         flex-direction: column;
       `}

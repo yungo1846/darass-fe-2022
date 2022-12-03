@@ -1,22 +1,40 @@
 import { css } from "@emotion/react";
-import { Button } from "@mui/material";
+import { Button, TextField } from "@mui/material";
+import { useState } from "react";
 import { useCreateComment } from "src/hooks/mutations/useCreateComment";
 import { useSuspendedComments } from "src/hooks/queries/useSuspendedComments";
-import { useContentEditable } from "src/hooks/useContentEditable";
 
 export function CommentInputBox() {
-  const { content, setContent, onInput, contentEditableRef } =
-    useContentEditable("");
+  const [content, setContent] = useState("");
   const { mutate: createComment } = useCreateComment();
 
   return (
     <div
       css={css`
-        border: 1px solid black;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 16px;
+        margin-top: 16px;
       `}
     >
-      <div ref={contentEditableRef} contentEditable={true} onInput={onInput} />
+      <TextField
+        css={css`
+          width: 100%;
+        `}
+        multiline
+        maxRows={6}
+        placeholder="댓글 입력"
+        value={content}
+        onChange={(event) => {
+          setContent(event.target.value);
+        }}
+      />
       <Button
+        variant="contained"
+        css={css`
+          width: 52px;
+        `}
         onClick={() => {
           createComment(
             { content },

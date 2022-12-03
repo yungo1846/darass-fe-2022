@@ -25,6 +25,11 @@ export const normalization = css`
     overflow: visible; /* 2 */
   }
 
+  ul,
+  ol {
+    padding: 0;
+  }
+
   pre {
     font-family: monospace, monospace; /* 1 */
     font-size: 1em; /* 2 */
