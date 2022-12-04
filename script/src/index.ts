@@ -1,7 +1,6 @@
 import { POST_MESSAGE_TYPE } from "./constants/postMessageType";
 import { IFRAME_STYLE } from "./styles/iframe";
-import { createIframe } from "./utils/dom";
-import { getReplyModuleURL } from "./utils/getURL";
+import { createIframe, resizeElementHeight } from "./utils/dom";
 
 const messageChannel = {
   replyModule: new MessageChannel(),
@@ -37,10 +36,24 @@ const init = () => {
     "http://localhost:3000",
     IFRAME_STYLE.REPLY_MODULE
   );
+
   $replyModuleIframe.setAttribute("scrolling", "no");
 
   $darass.append($replyModuleIframe);
-  //document.body.append($modalIframe);
+
+  const onMessageFromReplyModuleIFrame = ({
+    data: { type, data },
+  }: MessageEvent) => {
+    const ACTION_TABLE = {
+      [POST_MESSAGE_TYPE.SCROLL_HEIGHT]: () =>
+        resizeElementHeight($replyModuleIframe, data),
+    } as const;
+
+    if (!Object.keys(ACTION_TABLE).includes(type)) return;
+    ACTION_TABLE[type as keyof typeof ACTION_TABLE]();
+  };
+
+  window.addEventListener("message", onMessageFromReplyModuleIFrame);
 };
 
 window.addEventListener("load", init);

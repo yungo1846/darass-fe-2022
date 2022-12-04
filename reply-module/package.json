@@ -1,5 +1,5 @@
 {
-  "name": "darass-fe-2022",
+  "name": "reply-module",
   "version": "1.0.0",
   "main": "index.js",
   "repository": "https://github.com/yungo1846/darass-fe-2022.git",
@@ -9,15 +9,31 @@
   "scripts": {
     "start": "webpack serve"
   },
+  "dependencies": {
+    "@emotion/react": "^11.10.5",
+    "@emotion/styled": "^11.10.5",
+    "@mui/material": "^5.10.15",
+    "@toss/react-query": "^1.0.2",
+    "ky": "^0.31.4",
+    "lodash.throttle": "^4.1.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-query": "^3.39.2"
+  },
   "devDependencies": {
     "@babel/cli": "^7.19.3",
     "@babel/core": "^7.19.6",
     "@babel/preset-env": "^7.19.4",
+    "@babel/preset-react": "^7.18.6",
     "@babel/preset-typescript": "^7.18.6",
+    "@emotion/babel-plugin": "^11.10.5",
     "@types/babel__core": "^7",
     "@types/babel__preset-env": "^7",
     "@types/dotenv-webpack": "^7.0.3",
+    "@types/lodash.throttle": "^4",
     "@types/node": "^18.11.7",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
     "babel-loader": "^9.0.0",
     "dotenv-webpack": "^8.0.1",
     "file-loader": "^6.2.0",
