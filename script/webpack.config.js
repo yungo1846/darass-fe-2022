@@ -1,13 +1,11 @@
 const path = require("path");
-const HtmlWebpackPlugin = require("html-webpack-plugin");
-const webpack = require("webpack");
-const Dotenv = require("dotenv-webpack");
 
 const cwd = process.cwd();
+const { DefinePlugin } = require("webpack");
 
 module.exports = {
   mode: process.env === "production" ? "production" : "development",
-  entry: path.join(cwd, "src/index.tsx"),
+  entry: path.join(cwd, "src/index.ts"),
   output: {
     publicPath: "/",
     path: path.join(cwd, "dist"),
@@ -30,16 +28,25 @@ module.exports = {
           },
         },
       },
-      { test: /\.(png|jpe?g)$/, use: { loader: "file-loader" } },
     ],
   },
   plugins: [
-    new HtmlWebpackPlugin({ template: "public/index.html" }),
-    new Dotenv(),
+    new DefinePlugin({
+      "process.env.BUILD_MODE": JSON.stringify(process.env.BUILD_MODE),
+      "process.env.DEV_SERVER": JSON.stringify(process.env.DEV_SERVER),
+    }),
   ],
-  devServer: {
-    port: 3000,
-    historyApiFallback: true,
-    hot: true,
-  },
+  devServer:
+    process.env.DEV_SERVER === "STATIC"
+      ? {
+          port: 5501,
+          hot: true,
+          static: {
+            directory: path.join(__dirname, "dist"),
+          },
+        }
+      : {
+          port: 5500,
+          hot: true,
+        },
 };
