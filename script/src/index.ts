@@ -1,11 +1,8 @@
 import { POST_MESSAGE_TYPE } from "./constants/postMessageType";
 import { IFRAME_STYLE } from "./styles/iframe";
 import { createIframe, resizeElementHeight } from "./utils/dom";
-
-const messageChannel = {
-  replyModule: new MessageChannel(),
-  replyModal: new MessageChannel(),
-};
+import { QS } from "@toss/utils";
+import { getReplyModuleURL, refineCurrentURL } from "./utils/getURL";
 
 const blockTistoryMobilePath = () => {
   if (window.location.host.includes("tistory")) {
@@ -33,7 +30,7 @@ const init = () => {
   }
 
   const $replyModuleIframe = createIframe(
-    "http://localhost:3000",
+    getReplyModuleURL({ projectKey }),
     IFRAME_STYLE.REPLY_MODULE
   );
 

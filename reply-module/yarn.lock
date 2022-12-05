@@ -1342,7 +1342,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/runtime@npm:^7.12.5, @babel/runtime@npm:^7.18.3, @babel/runtime@npm:^7.20.1, @babel/runtime@npm:^7.5.5, @babel/runtime@npm:^7.6.2, @babel/runtime@npm:^7.7.2, @babel/runtime@npm:^7.8.7":
+"@babel/runtime@npm:^7.12.5, @babel/runtime@npm:^7.14.8, @babel/runtime@npm:^7.18.3, @babel/runtime@npm:^7.20.1, @babel/runtime@npm:^7.5.5, @babel/runtime@npm:^7.6.2, @babel/runtime@npm:^7.7.2, @babel/runtime@npm:^7.8.7":
   version: 7.20.6
   resolution: "@babel/runtime@npm:7.20.6"
   dependencies:
@@ -1842,6 +1842,16 @@ __metadata:
     react: ">=16.8.0 || ^17.0.0 || ^18"
     react-query: "*"
   checksum: f4dfe41ff6a0a0f9577f703b4367dd000017ebff64b5199ff81b7893eab127c591374c278766afefeb438c9ca96c84fae546fd3b302315f53320c2b45258b407
+  languageName: node
+  linkType: hard
+
+"@toss/utils@npm:^1.2.2":
+  version: 1.2.2
+  resolution: "@toss/utils@npm:1.2.2"
+  dependencies:
+    "@babel/runtime": ^7.14.8
+    date-fns: ^2.25.0
+  checksum: 86dccb46863f8febb9f177572905a7271f01076c92570bcada1067185c6ba62e44719cae6a2c47b70c43e57d1bd0f8d441aa978b564c5580dee7c594e07d4b61
   languageName: node
   linkType: hard
 
@@ -3120,6 +3130,13 @@ __metadata:
   version: 3.1.1
   resolution: "csstype@npm:3.1.1"
   checksum: 1f7b4f5fdd955b7444b18ebdddf3f5c699159f13e9cf8ac9027ae4a60ae226aef9bbb14a6e12ca7dba3358b007cee6354b116e720262867c398de6c955ea451d
+  languageName: node
+  linkType: hard
+
+"date-fns@npm:^2.25.0":
+  version: 2.29.3
+  resolution: "date-fns@npm:2.29.3"
+  checksum: e01cf5b62af04e05dfff921bb9c9933310ed0e1ae9a81eb8653452e64dc841acf7f6e01e1a5ae5644d0337e9a7f936175fd2cb6819dc122fdd9c5e86c56be484
   languageName: node
   linkType: hard
 
@@ -5425,6 +5442,7 @@ __metadata:
     "@emotion/styled": ^11.10.5
     "@mui/material": ^5.10.15
     "@toss/react-query": ^1.0.2
+    "@toss/utils": ^1.2.2
     "@types/babel__core": ^7
     "@types/babel__preset-env": ^7
     "@types/dotenv-webpack": ^7.0.3

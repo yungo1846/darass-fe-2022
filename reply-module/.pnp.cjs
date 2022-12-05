@@ -38,6 +38,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@emotion/styled", "virtual:df056acd13d2bf4cabd475b445d41a44c0433a0670a0cc579734a7382859c512d3af66e4fd7603396ec4bcf3ce424ef3fcf3d87419aa0fb6003eaabcbc5a92ff#npm:11.10.5"],\
             ["@mui/material", "virtual:df056acd13d2bf4cabd475b445d41a44c0433a0670a0cc579734a7382859c512d3af66e4fd7603396ec4bcf3ce424ef3fcf3d87419aa0fb6003eaabcbc5a92ff#npm:5.10.16"],\
             ["@toss/react-query", "virtual:df056acd13d2bf4cabd475b445d41a44c0433a0670a0cc579734a7382859c512d3af66e4fd7603396ec4bcf3ce424ef3fcf3d87419aa0fb6003eaabcbc5a92ff#npm:1.1.2"],\
+            ["@toss/utils", "npm:1.2.2"],\
             ["@types/babel__core", "npm:7.1.19"],\
             ["@types/babel__preset-env", "npm:7.9.2"],\
             ["@types/dotenv-webpack", "npm:7.0.3"],\
@@ -3097,6 +3098,17 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
+      ["@toss/utils", [\
+        ["npm:1.2.2", {\
+          "packageLocation": "./.yarn/cache/@toss-utils-npm-1.2.2-71b19b4151-86dccb4686.zip/node_modules/@toss/utils/",\
+          "packageDependencies": [\
+            ["@toss/utils", "npm:1.2.2"],\
+            ["@babel/runtime", "npm:7.20.6"],\
+            ["date-fns", "npm:2.29.3"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
       ["@types/babel__core", [\
         ["npm:7.1.19", {\
           "packageLocation": "./.yarn/cache/@types-babel__core-npm-7.1.19-bd8ad53364-8c9fa87a1c.zip/node_modules/@types/babel__core/",\
@@ -4668,6 +4680,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/csstype-npm-3.1.1-3857baf48b-1f7b4f5fdd.zip/node_modules/csstype/",\
           "packageDependencies": [\
             ["csstype", "npm:3.1.1"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["date-fns", [\
+        ["npm:2.29.3", {\
+          "packageLocation": "./.yarn/cache/date-fns-npm-2.29.3-fef7e3c72c-e01cf5b62a.zip/node_modules/date-fns/",\
+          "packageDependencies": [\
+            ["date-fns", "npm:2.29.3"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -7410,6 +7431,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@emotion/styled", "virtual:df056acd13d2bf4cabd475b445d41a44c0433a0670a0cc579734a7382859c512d3af66e4fd7603396ec4bcf3ce424ef3fcf3d87419aa0fb6003eaabcbc5a92ff#npm:11.10.5"],\
             ["@mui/material", "virtual:df056acd13d2bf4cabd475b445d41a44c0433a0670a0cc579734a7382859c512d3af66e4fd7603396ec4bcf3ce424ef3fcf3d87419aa0fb6003eaabcbc5a92ff#npm:5.10.16"],\
             ["@toss/react-query", "virtual:df056acd13d2bf4cabd475b445d41a44c0433a0670a0cc579734a7382859c512d3af66e4fd7603396ec4bcf3ce424ef3fcf3d87419aa0fb6003eaabcbc5a92ff#npm:1.1.2"],\
+            ["@toss/utils", "npm:1.2.2"],\
             ["@types/babel__core", "npm:7.1.19"],\
             ["@types/babel__preset-env", "npm:7.9.2"],\
             ["@types/dotenv-webpack", "npm:7.0.3"],\

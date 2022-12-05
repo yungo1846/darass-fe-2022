@@ -3,8 +3,10 @@ import { Button, TextField } from "@mui/material";
 import { useState } from "react";
 import { useCreateComment } from "src/hooks/mutations/useCreateComment";
 import { useSuspendedComments } from "src/hooks/queries/useSuspendedComments";
+import { useSuspendedUser } from "src/hooks/queries/useSuspendedUser";
 
 export function CommentInputBox() {
+  const { data: user } = useSuspendedUser();
   const [content, setContent] = useState("");
   const { mutate: createComment } = useCreateComment();
 
@@ -24,7 +26,9 @@ export function CommentInputBox() {
         `}
         multiline
         maxRows={6}
-        placeholder="댓글 입력"
+        placeholder={
+          user == null ? "댓글을 추가하려면 로그인이 필요해요" : "댓글 입력"
+        }
         value={content}
         onChange={(event) => {
           setContent(event.target.value);
@@ -35,6 +39,7 @@ export function CommentInputBox() {
         css={css`
           width: 52px;
         `}
+        disabled={user == null}
         onClick={() => {
           createComment(
             { content },
