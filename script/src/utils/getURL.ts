@@ -1,5 +1,5 @@
 import { QS } from "@toss/utils";
-import { END_POINT, URL_REPLACE_TABLE } from "../constants/common";
+import { URL_REPLACE_TABLE } from "../constants/common";
 
 export const refineCurrentURL = () => {
   let currentURL = window.location.origin + window.location.pathname;
