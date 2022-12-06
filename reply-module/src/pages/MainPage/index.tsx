@@ -2,10 +2,10 @@ import { css } from "@emotion/react";
 import { useEffect, useRef } from "react";
 import { CommentInputBox } from "src/containers/CommentInputBox";
 import { postMessageToParent } from "src/utils/postMessage";
-import { Avatar } from "../Avatar";
-import { CommentList } from "../CommentList";
+import { Avatar } from "../../containers/Avatar";
+import { CommentList } from "../../containers/CommentList";
 
-export function Container() {
+export function MainPage() {
   const ref = useRef<HTMLDivElement>(null);
 
   useEffect(() => {

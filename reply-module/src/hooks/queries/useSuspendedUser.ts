@@ -1,5 +1,6 @@
 import { useSuspendedQuery } from "@toss/react-query";
 import { User } from "src/domains/user";
+import { queryClient } from "src/pages/App";
 import { client } from "src/utils/network";
 
 export function useSuspendedUser() {
@@ -15,3 +16,6 @@ export function useSuspendedUser() {
 }
 
 useSuspendedUser.key = ["user"];
+useSuspendedUser.refetch = async () => {
+  queryClient.refetchQueries(useSuspendedUser.key);
+};

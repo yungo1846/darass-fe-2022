@@ -8,6 +8,7 @@ import {
 } from "material-ui-popup-state/hooks";
 import { User } from "src/domains/user";
 import { useSuspendedUser } from "src/hooks/queries/useSuspendedUser";
+import { OAUTH_SUCCESS_MESSAGE } from "src/pages/OauthSuccessPage";
 
 export function Avatar() {
   const { data: user } = useSuspendedUser();
@@ -31,7 +32,7 @@ function UnknownUser() {
           css={css`
             font-size: 20px;
             font-weight: 600;
-            margin-left: 8px;
+            margin-left: 4px;
           `}
           color="inherit"
           variant="text"
@@ -43,12 +44,26 @@ function UnknownUser() {
           <MenuItem
             onClick={() => {
               popupState.close();
-              window.open("http://localhost:8000/v1/auth/kakao");
+
+              const popupX = window.screen.width / 2 - 700 / 2;
+              const popupY = window.screen.height / 2 - 800 / 2;
+
+              const popup = window.open(
+                "http://localhost:8000/v1/auth/kakao",
+                "로그인 팝업",
+                `width=700px,height=800px,scrollbars=yes,left=${popupX}px, top=${popupY}px`
+              );
+
+              popup?.window.addEventListener("message", (event) => {
+                if (event.data === OAUTH_SUCCESS_MESSAGE) {
+                  useSuspendedUser.refetch();
+                }
+              });
             }}
           >
             카카오
           </MenuItem>
-          <MenuItem onClick={popupState.close}>Death</MenuItem>
+          <MenuItem onClick={popupState.close}>네이버</MenuItem>
         </Menu>
       </div>
     </>
