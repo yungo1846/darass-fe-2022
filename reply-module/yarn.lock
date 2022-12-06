@@ -1933,6 +1933,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@toss/error-boundary@npm:^1.2.0":
+  version: 1.2.0
+  resolution: "@toss/error-boundary@npm:1.2.0"
+  dependencies:
+    "@toss/utils": ^1.3.0
+  peerDependencies:
+    react: ^16.8 || ^17 || ^18
+  checksum: 91665c3d4047be692d9a955372d91b09faf230be365e23d6e974785297f3a99e2d6600bc2770d2105bc17f55932b89a943b09153b54e3e6f8c66a96030efa2b0
+  languageName: node
+  linkType: hard
+
 "@toss/react-query@npm:^1.0.2":
   version: 1.1.2
   resolution: "@toss/react-query@npm:1.1.2"
@@ -1950,6 +1961,16 @@ __metadata:
     "@babel/runtime": ^7.14.8
     date-fns: ^2.25.0
   checksum: 86dccb46863f8febb9f177572905a7271f01076c92570bcada1067185c6ba62e44719cae6a2c47b70c43e57d1bd0f8d441aa978b564c5580dee7c594e07d4b61
+  languageName: node
+  linkType: hard
+
+"@toss/utils@npm:^1.3.0":
+  version: 1.3.0
+  resolution: "@toss/utils@npm:1.3.0"
+  dependencies:
+    "@babel/runtime": ^7.14.8
+    date-fns: ^2.25.0
+  checksum: a910c46085a4d9018a00268c8662270c5f94096e9763b3cb728e707e1deeae1dbd298cf38b93bf81b0c3becb90e9639f3ca5ec9c7fd585b48057412e76e5b69c
   languageName: node
   linkType: hard
 
@@ -5584,6 +5605,7 @@ __metadata:
     "@emotion/react": ^11.10.5
     "@emotion/styled": ^11.10.5
     "@mui/material": ^5.10.15
+    "@toss/error-boundary": ^1.2.0
     "@toss/react-query": ^1.0.2
     "@toss/utils": ^1.2.2
     "@types/babel__core": ^7

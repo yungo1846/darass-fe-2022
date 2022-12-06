@@ -19,8 +19,12 @@ export const refineCurrentURL = () => {
   return currentURL;
 };
 
+const REPLY_MODULE_URL = process.env.BUILD_MODE
+  ? "http://darass-2022-reply-module.s3-website.ap-northeast-2.amazonaws.com"
+  : "http://localhost:3000";
+
 export const getReplyModuleURL = ({ projectKey }: { projectKey: string }) => {
-  const url = `http://localhost:3000${QS.create({
+  const url = `${REPLY_MODULE_URL}${QS.create({
     url: refineCurrentURL(),
     projectId: projectKey,
   })}`;

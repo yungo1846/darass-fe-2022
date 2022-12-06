@@ -37,6 +37,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@emotion/react", "virtual:df056acd13d2bf4cabd475b445d41a44c0433a0670a0cc579734a7382859c512d3af66e4fd7603396ec4bcf3ce424ef3fcf3d87419aa0fb6003eaabcbc5a92ff#npm:11.10.5"],\
             ["@emotion/styled", "virtual:df056acd13d2bf4cabd475b445d41a44c0433a0670a0cc579734a7382859c512d3af66e4fd7603396ec4bcf3ce424ef3fcf3d87419aa0fb6003eaabcbc5a92ff#npm:11.10.5"],\
             ["@mui/material", "virtual:df056acd13d2bf4cabd475b445d41a44c0433a0670a0cc579734a7382859c512d3af66e4fd7603396ec4bcf3ce424ef3fcf3d87419aa0fb6003eaabcbc5a92ff#npm:5.10.16"],\
+            ["@toss/error-boundary", "virtual:df056acd13d2bf4cabd475b445d41a44c0433a0670a0cc579734a7382859c512d3af66e4fd7603396ec4bcf3ce424ef3fcf3d87419aa0fb6003eaabcbc5a92ff#npm:1.2.0"],\
             ["@toss/react-query", "virtual:df056acd13d2bf4cabd475b445d41a44c0433a0670a0cc579734a7382859c512d3af66e4fd7603396ec4bcf3ce424ef3fcf3d87419aa0fb6003eaabcbc5a92ff#npm:1.1.2"],\
             ["@toss/utils", "npm:1.2.2"],\
             ["@types/babel__core", "npm:7.1.19"],\
@@ -3227,6 +3228,29 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
+      ["@toss/error-boundary", [\
+        ["npm:1.2.0", {\
+          "packageLocation": "./.yarn/cache/@toss-error-boundary-npm-1.2.0-6d74db6525-91665c3d40.zip/node_modules/@toss/error-boundary/",\
+          "packageDependencies": [\
+            ["@toss/error-boundary", "npm:1.2.0"]\
+          ],\
+          "linkType": "SOFT"\
+        }],\
+        ["virtual:df056acd13d2bf4cabd475b445d41a44c0433a0670a0cc579734a7382859c512d3af66e4fd7603396ec4bcf3ce424ef3fcf3d87419aa0fb6003eaabcbc5a92ff#npm:1.2.0", {\
+          "packageLocation": "./.yarn/__virtual__/@toss-error-boundary-virtual-a0406e0a66/0/cache/@toss-error-boundary-npm-1.2.0-6d74db6525-91665c3d40.zip/node_modules/@toss/error-boundary/",\
+          "packageDependencies": [\
+            ["@toss/error-boundary", "virtual:df056acd13d2bf4cabd475b445d41a44c0433a0670a0cc579734a7382859c512d3af66e4fd7603396ec4bcf3ce424ef3fcf3d87419aa0fb6003eaabcbc5a92ff#npm:1.2.0"],\
+            ["@toss/utils", "npm:1.3.0"],\
+            ["@types/react", "npm:18.0.26"],\
+            ["react", "npm:18.2.0"]\
+          ],\
+          "packagePeers": [\
+            "@types/react",\
+            "react"\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
       ["@toss/react-query", [\
         ["npm:1.1.2", {\
           "packageLocation": "./.yarn/cache/@toss-react-query-npm-1.1.2-78b43184f3-f4dfe41ff6.zip/node_modules/@toss/react-query/",\
@@ -3258,6 +3282,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/@toss-utils-npm-1.2.2-71b19b4151-86dccb4686.zip/node_modules/@toss/utils/",\
           "packageDependencies": [\
             ["@toss/utils", "npm:1.2.2"],\
+            ["@babel/runtime", "npm:7.20.6"],\
+            ["date-fns", "npm:2.29.3"]\
+          ],\
+          "linkType": "HARD"\
+        }],\
+        ["npm:1.3.0", {\
+          "packageLocation": "./.yarn/cache/@toss-utils-npm-1.3.0-3df5257eaa-a910c46085.zip/node_modules/@toss/utils/",\
+          "packageDependencies": [\
+            ["@toss/utils", "npm:1.3.0"],\
             ["@babel/runtime", "npm:7.20.6"],\
             ["date-fns", "npm:2.29.3"]\
           ],\
@@ -7692,6 +7725,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@emotion/react", "virtual:df056acd13d2bf4cabd475b445d41a44c0433a0670a0cc579734a7382859c512d3af66e4fd7603396ec4bcf3ce424ef3fcf3d87419aa0fb6003eaabcbc5a92ff#npm:11.10.5"],\
             ["@emotion/styled", "virtual:df056acd13d2bf4cabd475b445d41a44c0433a0670a0cc579734a7382859c512d3af66e4fd7603396ec4bcf3ce424ef3fcf3d87419aa0fb6003eaabcbc5a92ff#npm:11.10.5"],\
             ["@mui/material", "virtual:df056acd13d2bf4cabd475b445d41a44c0433a0670a0cc579734a7382859c512d3af66e4fd7603396ec4bcf3ce424ef3fcf3d87419aa0fb6003eaabcbc5a92ff#npm:5.10.16"],\
+            ["@toss/error-boundary", "virtual:df056acd13d2bf4cabd475b445d41a44c0433a0670a0cc579734a7382859c512d3af66e4fd7603396ec4bcf3ce424ef3fcf3d87419aa0fb6003eaabcbc5a92ff#npm:1.2.0"],\
             ["@toss/react-query", "virtual:df056acd13d2bf4cabd475b445d41a44c0433a0670a0cc579734a7382859c512d3af66e4fd7603396ec4bcf3ce424ef3fcf3d87419aa0fb6003eaabcbc5a92ff#npm:1.1.2"],\
             ["@toss/utils", "npm:1.2.2"],\
             ["@types/babel__core", "npm:7.1.19"],\
