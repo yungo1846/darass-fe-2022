@@ -17,6 +17,7 @@
     "@toss/utils": "^1.2.2",
     "ky": "^0.31.4",
     "lodash.throttle": "^4.1.1",
+    "material-ui-popup-state": "^4.1.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-query": "^3.39.2"
