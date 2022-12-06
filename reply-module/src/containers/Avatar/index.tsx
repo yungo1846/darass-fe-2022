@@ -6,6 +6,7 @@ import {
   bindTrigger,
   usePopupState,
 } from "material-ui-popup-state/hooks";
+import { ENDPOINT } from "src/constants/endpoint";
 import { User } from "src/domains/user";
 import { useSuspendedUser } from "src/hooks/queries/useSuspendedUser";
 import { OAUTH_SUCCESS_MESSAGE } from "src/pages/OauthSuccessPage";
@@ -49,7 +50,7 @@ function UnknownUser() {
               const popupY = window.screen.height / 2 - 800 / 2;
 
               const popup = window.open(
-                "http://localhost:8000/v1/auth/kakao",
+                `${ENDPOINT}/v1/auth/kakao`,
                 "로그인 팝업",
                 `width=700px,height=800px,scrollbars=yes,left=${popupX}px, top=${popupY}px`
               );

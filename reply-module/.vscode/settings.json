@@ -5,5 +5,6 @@
   },
   "typescript.tsdk": ".yarn/sdks/typescript/lib",
   "typescript.enablePromptUseWorkspaceTsdk": true,
-  "cSpell.words": ["queryclient"]
+  "cSpell.words": ["queryclient"],
+  "liveServer.settings.port": 5502
 }

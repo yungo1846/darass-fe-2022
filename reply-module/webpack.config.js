@@ -6,7 +6,7 @@ const Dotenv = require("dotenv-webpack");
 const cwd = process.cwd();
 
 module.exports = {
-  mode: process.env === "production" ? "production" : "development",
+  mode: process.env.NODE_ENV === "production" ? "production" : "development",
   entry: path.join(cwd, "src/index.tsx"),
   output: {
     publicPath: "/",

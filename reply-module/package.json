@@ -7,7 +7,8 @@
   "license": "MIT",
   "packageManager": "yarn@3.2.4",
   "scripts": {
-    "start": "webpack serve"
+    "start": "webpack serve",
+    "build:production": "NODE_ENV=production webpack --mode production"
   },
   "dependencies": {
     "@emotion/react": "^11.10.5",
