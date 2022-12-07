@@ -19,9 +19,10 @@ export const refineCurrentURL = () => {
   return currentURL;
 };
 
-const REPLY_MODULE_URL = process.env.BUILD_MODE
-  ? "https://reply-module.darass.site"
-  : "http://localhost:3000";
+const REPLY_MODULE_URL =
+  process.env.BUILD_MODE === "production"
+    ? "https://reply-module.darass.site"
+    : "http://localhost:3000";
 
 export const getReplyModuleURL = ({ projectKey }: { projectKey: string }) => {
   const url = `${REPLY_MODULE_URL}${QS.create({

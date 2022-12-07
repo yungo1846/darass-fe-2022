@@ -24,7 +24,7 @@ export function MainPage() {
       css={css`
         width: 100%;
         max-width: 1024px;
-        padding: 0 16px;
+        margin: 0 16px;
         display: flex;
         flex-direction: column;
       `}
