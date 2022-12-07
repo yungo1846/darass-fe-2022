@@ -20,7 +20,7 @@ export const refineCurrentURL = () => {
 };
 
 const REPLY_MODULE_URL = process.env.BUILD_MODE
-  ? "http://darass-2022-reply-module.s3-website.ap-northeast-2.amazonaws.com"
+  ? "https://reply-module.darass.site"
   : "http://localhost:3000";
 
 export const getReplyModuleURL = ({ projectKey }: { projectKey: string }) => {
